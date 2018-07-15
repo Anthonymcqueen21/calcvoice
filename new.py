@@ -142,7 +142,7 @@ def audio():
                     audio = audio.replace('um mais um','1+1')
                     audio = audio.replace('um mas um', '1+1')
                 elif "um menos um" in audio:
-                    audio = audio.replace('um menos um','1+1')
+                    audio = audio.replace('um menos um','1-1')
         except:
             CallVoice().falar("Não entendi")
         else:
