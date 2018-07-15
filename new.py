@@ -1,4 +1,3 @@
-
 import speech_recognition as sr
 import os,shutil
 import os.path
@@ -125,11 +124,8 @@ def audio():
         try:
             with sr.Microphone() as s:
                 r.adjust_for_ambient_noise(s)
-                CallVoice().falar("Diga um numero a operação mais outro numero")
                 audio = r.listen(s)
                 audio = r.recognize_google(audio, language="pt-BR")
-                print(audio)
-                input()
                 if "divide" in audio or "dividido" in audio:
                     print(audio)
                     audio =  audio.replace('divide','/')
@@ -142,7 +138,11 @@ def audio():
                     audio = audio.replace('vez', '*')
                     audio = audio.replace('vezes', '*')
                     print(audio)
-
+                elif "um mais um" in audio or "um mas um" in audio:
+                    audio = audio.replace('um mais um','1+1')
+                    audio = audio.replace('um mas um', '1+1')
+                elif "um menos um" in audio:
+                    audio = audio.replace('um menos um','1+1')
         except:
             CallVoice().falar("Não entendi")
         else:
@@ -150,5 +150,7 @@ def audio():
                 if c in "+-/*":
                     return audio
 
-print('Começando...')
+
+print('Aguarde...')
+CallVoice().falar("Diga um numero a operação mais outro numero")
 CallVoice().calcu(audio())
