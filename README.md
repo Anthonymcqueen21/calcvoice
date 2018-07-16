@@ -16,4 +16,5 @@
   <h1>Autores</h1>
   <a href="https://www.github.com/paulohenriquesn">Paulo Henrique</a><br>
   <a href="https://github.com/alanfranca2">Alan França</a>
+  <a href="https://github.com/JPTIZ">João Paulo Taylor</a>
   </center>
