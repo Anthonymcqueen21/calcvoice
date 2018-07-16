@@ -8,6 +8,9 @@
   <td>playsound</td>
   <td>os</td>
   <td>shutil</td>
+  <td>functools</td>
+  <td>iglob</td>
+  <td>List</td>
   </table>
   <hr>
   <h1>Autores</h1>
