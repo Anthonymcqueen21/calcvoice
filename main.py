@@ -13,9 +13,11 @@ from gtts import gTTS
 
 
 def speak(text, audio_pos=0):
+    voice_file = f"sfx/voz{audio_pos}.mp3"
+
     voice = gTTS(text, lang="pt-BR")
-    voice.save(f"sfx/voz{audio_pos}.mp3")
-    playsound.playsound(f'sfx/voz{audio_pos}.mp3')
+    voice.save(voice_file)
+    playsound.playsound(voice_file)
 
 
 def ask(r: sr.Recognizer, source: sr.AudioSource, message: str=None):
